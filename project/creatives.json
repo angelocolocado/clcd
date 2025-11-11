@@ -1,0 +1,87 @@
+{
+  "category": {
+    "title": "Creatives",
+    "description": "Capturing moments and telling stories through visual artistry. A blend of technical precision and creative vision in photography and filmmaking.",
+    "availability": "0"
+  },
+  "photography": {
+    "visible": 0,
+    "title": "Photography",
+    "description": "From portraits to landscapes, capturing the essence of every frame with attention to light, composition, and emotion.",
+    "gallery": [
+      {
+        "id": 1,
+        "category": "Portrait",
+        "image": "",
+        "alt": "Portrait Photography"
+      },
+      {
+        "id": 2,
+        "category": "Landscape",
+        "image": "https://lh3.googleusercontent.com/d/1tJ0sw9-0_MFW_eAXlC07V4Q2Vy2WSxxe",
+        "alt": "Landscape Photography"
+      },
+      {
+        "id": 3,
+        "category": "Event",
+        "image": "",
+        "alt": "Event Photography"
+      },
+      {
+        "id": 4,
+        "category": "Product",
+        "image": "",
+        "alt": "Product Photography"
+      },
+      {
+        "id": 5,
+        "category": "Street",
+        "image": "",
+        "alt": "Street Photography"
+      },
+      {
+        "id": 6,
+        "category": "Nature",
+        "image": "",
+        "alt": "Nature Photography"
+      }
+    ]
+  },
+  "filmmaking": {
+    "visible": 1,
+    "title": "Film Making",
+    "description": "Crafting compelling visual narratives through cinematography, editing, and storytelling that resonates and inspires.",
+    "films": [
+      {
+        "id": 1,
+        "title": "Sex Education ADS",
+        "description": "A thought-provoking documentary exploring the impact of comprehensive sex education on youth empowerment and health.",
+        "thumbnail": "assets/projects/crtv_flm2.webp",
+        "duration": "5:30",
+        "type": "Documentary",
+        "year": "2024",
+        "videoUrl": ""
+      },
+      {
+        "id": 2,
+        "title": "Music Video Production - OLFU",
+        "description": "Dynamic visual experience combining rhythmic editing and creative cinematography to amplify the music's emotion.",
+        "thumbnail": "assets/projects/crtv_flm3.webp",
+        "duration": "1:15",
+        "type": "Music Video",
+        "year": "2024",
+        "videoUrl": ""
+      },
+      {
+        "id": 3,
+        "title": "Event Highlights Reel",
+        "description": "Capturing the energy and memorable moments of special events with professional editing and color grading.",
+        "thumbnail": "",
+        "duration": "2:45",
+        "type": "Event",
+        "year": "2024",
+        "videoUrl": ""
+      }
+    ]
+  }
+}

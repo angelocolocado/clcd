@@ -1,0 +1,39 @@
+{
+  "category": {
+    "title": "Client Testimonials",
+    "description": "What my clients say about working with me",
+    "availability": "1"
+  },
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Ronelyn Esquerda",
+      "position": "Project Research Lead",
+      "company": "OLFU - PHYSICS FAIR.",
+      "image": "assets/testimonial/testimonial1.webp",
+      "rating": 5,
+      "testimonial": "An exceptional leader who inspired and guided our team to victory in the Physics Fair through strategic planning, teamwork, and dedication.",
+      "project": "E-Commerce Platform"
+    },
+    {
+      "id": 2,
+      "name": "Janelle Terez",
+      "position": "Filming Director",
+      "company": "GrowthLabs",
+      "image": "",
+      "rating": 5,
+      "testimonial": "Professional, creative, and always on time. The quality of work speaks for itself. Highly recommended!",
+      "project": "Property Management System"
+    },
+    {
+      "id": 3,
+      "name": "Jhyzel Valles",
+      "position": "Founder & Creative Director",
+      "company": "DesignHub Studio",
+      "image": "assets/testimonial/testimonial3.webp",
+      "rating": 5,
+      "testimonial": "Working with Angelo turned my vision into reality, surpassing all my expectations with his exceptional skills and dedication!",
+      "project": "Brand Identity & Website"
+    }
+  ]
+}

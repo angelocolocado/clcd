@@ -1,0 +1,17 @@
+{
+    "1": {
+        "project-name": "CUSTOM SYSTEM DEVELOPMENT",
+        "project-description": "Modern, responsive web applications built with cutting-edge technologies for optimal performance and scalability",
+        "project-video": "./assets/projects/custom-system.gif"
+    },
+    "2": {
+        "project-name": "WEB APP DEVELOPMENT",
+        "project-description": "Modern, responsive web applications built with cutting-edge technologies for optimal performance and scalability",
+        "project-video": "./assets/projects/webdev.gif"
+    },
+    "3": {
+        "project-name": "FILM & VIDEO PRODUCTION",
+        "project-description": "Professional video editing and color grading services with cinematic storytelling and visual effects expertise",
+        "project-video": "./assets/projects/post-production.gif"
+    }
+}

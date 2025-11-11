@@ -1,0 +1,12 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Set your base folder (change if not in subfolder)
+RewriteBase /clcd.com
+
+# If the request is not a file or folder
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite /something → /index.php?page=something
+RewriteRule ^(.+)$ index.php?page=$1 [QSA,L]

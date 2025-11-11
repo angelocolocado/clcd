@@ -1,0 +1,36 @@
+{
+  "category": {
+    "title": "WebApp & Integrated System",
+    "description": "Building scalable, robust digital solutions that power businesses and enhance user experiences. From full-stack web applications to seamless system integrations."
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "description": "A modern, responsive e-commerce solution with real-time inventory management, secure payment integration, and advanced analytics dashboard.",
+      "image": "assets/projects/e-commerce.gif",
+      "link": ""
+    },
+    {
+      "id": 2,
+      "title": "Admin Management System",
+      "description": "Comprehensive admin management platform featuring user roles, permissions, activity logs, and detailed reporting capabilities.",
+      "image": "assets/projects/admin-system.gif",
+      "link": ""
+    },
+    {
+      "id": 3,
+      "title": "Advanced Analytics Platform",
+      "description": "Comprehensive analytics dashboard with real-time data visualization, user activity tracking, and customizable reporting features.",
+      "image": "assets/projects/analytics-system.gif",
+      "link": ""
+    },
+    {
+      "id": 4,
+      "title": "Smart Building IoT Platform",
+      "description": "An integrated IoT system for smart buildings, featuring device management, real-time monitoring, and data analytics.",
+      "image": "assets/projects/iot.gif",
+      "link": ""
+    }
+  ]
+}

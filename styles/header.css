@@ -1,0 +1,471 @@
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #000000 0%, #07070b 70%, #0a0a0f 100%);
+    color: white;
+}
+
+header {
+    padding-top: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    font-family: "Baloo Thambi 2", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%); */
+}
+
+.header-con {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header-con .logo {
+    height: 40px;
+    width: auto;
+    justify-self: start;
+    /* GPU acceleration */
+    transform: translateZ(0);
+    will-change: transform;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-con .logo:hover {
+    transform: translateZ(0) scale(1.05);
+}
+
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+   /* border: 0.5px solid rgba(255, 255, 255, 0.18); */
+    border-radius: 30px;
+
+    padding: 8px 20px;
+
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+
+    /* Center in grid */
+    justify-self: center;
+}
+
+.glass-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.glass-nav ul li {
+    margin: 0;
+}
+
+.glass-nav ul li a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 10px;
+    white-space: nowrap;
+
+    /* GPU acceleration */
+    transform: translateZ(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+}
+
+.glass-nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.glass-nav ul li a.active {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.glass-nav ul li a:active {
+    transform: translateZ(0) translateY(0);
+}
+
+/* Contact Button */
+.contact-btn {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 30px;
+    padding: 16px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    justify-self: end;
+
+    /* GPU acceleration */
+    transform: translateZ(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backface-visibility: hidden;
+
+    font-family: "Baloo Thambi 2", system-ui;
+}
+
+.contact-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.contact-btn:active {
+    transform: translateZ(0) translateY(0);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Hamburger Menu Button */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 0;
+    gap: 5px;
+    position: relative;
+    z-index: 1002;
+
+    /* GPU acceleration */
+    transform: translateZ(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backface-visibility: hidden;
+}
+
+.hamburger-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.hamburger-line {
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-origin: center;
+    position: absolute;
+
+    /* GPU acceleration */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+}
+
+.hamburger-line:nth-child(1) {
+    top: 12px;
+}
+
+.hamburger-line:nth-child(2) {
+    top: 21px;
+}
+
+.hamburger-line:nth-child(3) {
+    top: 30px;
+}
+
+/* Hamburger to X Animation */
+.hamburger-btn.active .hamburger-line:nth-child(1) {
+    top: 21px;
+    transform: translateZ(0) rotate(45deg);
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: translateZ(0) scaleX(0);
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(3) {
+    top: 21px;
+    transform: translateZ(0) rotate(-45deg);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* GPU acceleration */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.mobile-menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Mobile Glass Menu */
+.mobile-glass-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    max-width: 400px;
+    height: 100%;
+    background: rgba(20, 20, 30, 0.85);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 1001;
+
+    padding: 100px 40px 40px;
+
+    /* GPU acceleration */
+    transform: translateX(-100%) translateZ(0);
+    transition: transform 0.4s ease;
+    backface-visibility: hidden;
+    will-change: transform;
+
+    /* Hidden by default */
+    pointer-events: none;
+}
+
+.mobile-glass-menu.active {
+    transform: translateX(0) translateZ(0);
+    pointer-events: auto;
+}
+
+/* Slide out animation when closing */
+.mobile-glass-menu.closing {
+    transform: translateX(-100%) translateZ(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-glass-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-glass-menu nav ul li {
+    opacity: 0;
+    transform: translateX(-40px) translateZ(0);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Slide in when active */
+.mobile-glass-menu.active nav ul li {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+}
+
+.mobile-glass-menu.active nav ul li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.mobile-glass-menu.active nav ul li:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.mobile-glass-menu.active nav ul li:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.mobile-glass-menu.active nav ul li:nth-child(4) {
+    transition-delay: 0.25s;
+}
+
+/* Slide out when closing */
+.mobile-glass-menu.closing nav ul li {
+    opacity: 0;
+    transform: translateX(-40px) translateZ(0);
+    transition: all 0.25s ease-in-out;
+}
+
+.mobile-glass-menu.closing nav ul li:nth-child(1) {
+    transition-delay: 0.15s;
+}
+
+.mobile-glass-menu.closing nav ul li:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.mobile-glass-menu.closing nav ul li:nth-child(3) {
+    transition-delay: 0.05s;
+}
+
+.mobile-glass-menu.closing nav ul li:nth-child(4) {
+    transition-delay: 0s;
+}
+
+.mobile-glass-menu nav ul li a {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* GPU acceleration */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.mobile-glass-menu nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: translateX(10px) translateZ(0);
+}
+
+.mobile-glass-menu nav ul li a.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.mobile-glass-menu nav ul li a.mobile-contact {
+    background: transparent;
+    margin-top: 16px;
+}
+
+.mobile-glass-menu nav ul li a.mobile-contact:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive design - Tablet view (771px to 1024px) */
+@media (max-width: 1024px) and (min-width: 771px) {
+
+    .header-con {
+        gap: 16px;
+        max-width: 100%;
+    }
+
+    .glass-nav {
+        padding: 6px 16px;
+    }
+
+    .glass-nav ul {
+        gap: 6px;
+    }
+
+    .glass-nav ul li a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .contact-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 770px) {
+    header {
+        padding: 16px 24px;
+        padding-top: 40px;
+    }
+
+    .header-con {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+
+    body.menu-active .hamburger-btn {
+        position: absolute;
+        right: 24px;
+    }
+
+    .glass-nav {
+        display: none;
+    }
+
+    .contact-btn {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    .header-con .logo {
+        height: 35px;
+    }
+
+    body.menu-active .hamburger-btn {
+        right: 20px;
+    }
+
+    .mobile-glass-menu {
+        width: 70%;
+        padding: 80px 30px 30px;
+    }
+
+    .mobile-glass-menu nav ul li a {
+        font-size: 20px;
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-glass-menu {
+        width: 80%;
+        padding: 70px 24px 24px;
+    }
+
+    .mobile-glass-menu nav ul li a {
+        font-size: 18px;
+        padding: 12px 16px;
+    }
+}

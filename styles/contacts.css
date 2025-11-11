@@ -1,0 +1,299 @@
+﻿/* Contact Hero Section */
+.contact-hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(180deg, #000000 0%, #07070b 70%, #0a0a0f 100%);
+    transform: translateZ(0);
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 40px;
+    max-width: 900px;
+}
+
+.contact-hero-title {
+    font-size: clamp(48px, 8vw, 80px);
+    font-weight: 900;
+    margin: 0 0 16px 0;
+    background: linear-gradient(135deg, #e0e0e0 0%, #a0a0a0 50%, #707070 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -2px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.contact-hero-subtitle {
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 400;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Contact Form - Simple & Clean */
+.contact-form-section {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0a0a0f 0%, #000000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.form-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    min-height: 600px;
+    padding: 40px 20px;
+}
+
+.form-step {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    width: calc(100% - 40px);
+    max-width: 700px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.form-step.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+.step-content {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 60px 50px;
+}
+
+.step-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-title {
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 0 12px 0;
+}
+
+.step-description {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.greeting-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, rgba(160, 160, 160, 0.15) 0%, rgba(112, 112, 112, 0.15) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight-name {
+    background: linear-gradient(135deg, #e0e0e0 0%, #a0a0a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.input-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 16px 18px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-input:focus, .form-textarea:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(160, 160, 160, 0.5);
+    box-shadow: 0 0 0 4px rgba(160, 160, 160, 0.1);
+}
+
+.form-input.error, .form-textarea.error {
+    border-color: #ff4444;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 300px;
+}
+
+.textarea-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.char-count {
+    font-size: 13px;
+    color: #666;
+}
+
+.input-error {
+    font-size: 13px;
+    color: #ff4444;
+    min-height: 18px;
+}
+
+.btn-continue, .btn-submit {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #e0e0e0 0%, #a0a0a0 100%);
+    color: #000000;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+    transition: all 0.3s ease;
+}
+
+
+.btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-loading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.success-content {
+    text-align: center;
+    padding: 80px 50px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkmark {
+    stroke: #22c55e;
+}
+
+.success-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+}
+
+.success-text {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 40px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .step-content {
+        padding: 50px 35px;
+    }
+    
+    .success-content {
+        padding: 60px 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        height: 40vh;
+        min-height: 300px;
+    }
+    
+    .step-content {
+        padding: 40px 24px;
+    }
+    
+    .success-content {
+        padding: 50px 24px;
+    }
+}
