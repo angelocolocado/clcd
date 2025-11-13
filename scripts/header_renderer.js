@@ -1,6 +1,7 @@
 import { loadHome, cleanupVanta } from "./home_renderer.js";
 import { loadServices } from "./services_renderer.js";
 import { loadContact } from "./contact_renderer.js";
+import { loadInfo } from "./info_renderer.js";
 
 const headerContainer = document.querySelector('header');
 
@@ -30,6 +31,9 @@ function dynamicTitle() {
         case "contact":
             title += " | Contact Me & Get in Touch";
             break;
+        case "new":
+            title += " | Project Information & Resources";
+            break;
         default:
             title += " | Web Developer & Tech Enthusiast";
     }
@@ -48,7 +52,7 @@ function loadHeader(headerContainer) {
                     <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
                 </ul>
             </nav>
-            <button class="contact-btn" id="contact-btn-cta">Download CV</button>
+            <button onclick="window.location.href='https://drive.usercontent.google.com/download?id=1pK2eRgjX6v2-XE1bKmHt_JEmCqaeYK5H&export=download&authuser=0&confirm=t&uuid=ddb5ab0f-e858-4e18-8b13-e263d6a04726&at=ALWLOp5f6DWRVXt31PiaSBWZCXAC:1763040117059'" class="contact-btn" id="contact-btn-cta">Download CV</button>
             
             <button class="hamburger-btn" aria-label="Menu">
                 <span class="hamburger-line"></span>
@@ -117,6 +121,7 @@ if (!popstateHandler) {
 
 function loadPageContent(page) {
     const container = document.querySelector('.main-con');
+    const header = document.querySelector('header');
 
     // Scroll to top smoothly when changing pages
     window.scrollTo({
@@ -126,6 +131,13 @@ function loadPageContent(page) {
 
     // Clean up Vanta effect before switching pages
     cleanupVanta();
+
+    // Show/hide header based on page
+    if (page === 'new') {
+        if (header) header.style.display = 'none';
+    } else {
+        if (header) header.style.display = 'block';
+    }
 
     /*
 
@@ -157,6 +169,9 @@ function loadPageContent(page) {
             break;
         case 'contact':
             loadContact(container);
+            break;
+        case 'new':
+            loadInfo(container);
             break;
         case 'admin':
             window.location.href = './admin/index.php';

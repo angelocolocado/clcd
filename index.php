@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/services.css">
     <link rel="stylesheet" href="styles/contacts.css">
+    <link rel="stylesheet" href="styles/info.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="icon" type="image/x-icon" href="./assets/logo/logo-favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
