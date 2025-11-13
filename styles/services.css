@@ -119,7 +119,7 @@
     right: 0;
     bottom: 0;
     background-image: 
-        linear-gradient(rgba(74, 145, 226, 0.067) 1px, transparent 1px),
+        linear-gradient(rgba(74, 145, 226, 0.236) 1px, transparent 1px),
         linear-gradient(90deg, rgba(74, 145, 226, 0.044) 1px, transparent 1px);
     background-size: 50px 50px;
     opacity: 0.5;
@@ -384,18 +384,83 @@
 
 .discontinued-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 10;
+    text-align: center;
+    padding: 40px;
+}
+
+.discontinued-message {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 60px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid rgba(255, 107, 107, 0.4);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.discontinued-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 107, 107, 0.15);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 107, 107, 0.3);
+}
+
+.discontinued-icon-wrapper svg {
+    width: 48px;
+    height: 48px;
+    color: #ff6b6b;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.discontinued-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.discontinued-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff6b6b;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.discontinued-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
 }
 
 .discontinued .category-container > *:not(.category-header):not(.discontinued-overlay) {
-    opacity: 0.4;
-    filter: grayscale(70%);
+    opacity: 0.2;
     pointer-events: none;
+    filter: blur(2px);
+    user-select: none;
 }
 
 /* Projects Grid */
@@ -832,6 +897,29 @@
     .subsection-header {
         margin-bottom: 32px;
     }
+    
+    /* Discontinued message responsive */
+    .discontinued-message {
+        padding: 32px 48px;
+    }
+    
+    .discontinued-icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .discontinued-icon-wrapper svg {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .discontinued-title {
+        font-size: 24px;
+    }
+    
+    .discontinued-subtitle {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -866,6 +954,30 @@
     .subsection-icon {
         width: 48px;
         height: 48px;
+    }
+    
+    /* Discontinued message responsive */
+    .discontinued-message {
+        padding: 28px 36px;
+    }
+    
+    .discontinued-icon-wrapper {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .discontinued-icon-wrapper svg {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .discontinued-title {
+        font-size: 22px;
+        letter-spacing: 1.5px;
+    }
+    
+    .discontinued-subtitle {
+        font-size: 14px;
     }
 }
 
@@ -928,6 +1040,36 @@
     .subsection-header {
         margin-bottom: 28px;
     }
+    
+    /* Discontinued message responsive */
+    .discontinued-overlay {
+        padding: 20px;
+    }
+    
+    .discontinued-message {
+        padding: 24px 28px;
+        gap: 16px;
+        border-radius: 20px;
+    }
+    
+    .discontinued-icon-wrapper {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .discontinued-icon-wrapper svg {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .discontinued-title {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    
+    .discontinued-subtitle {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -947,5 +1089,29 @@
     .project-info,
     .film-info {
         padding: 16px;
+    }
+    
+    /* Discontinued message responsive */
+    .discontinued-message {
+        padding: 20px 24px;
+        gap: 12px;
+    }
+    
+    .discontinued-icon-wrapper {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .discontinued-icon-wrapper svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .discontinued-title {
+        font-size: 16px;
+    }
+    
+    .discontinued-subtitle {
+        font-size: 12px;
     }
 }

@@ -12,6 +12,6 @@
     "3": {
         "project-name": "FILM & VIDEO PRODUCTION",
         "project-description": "Professional video editing and color grading services with cinematic storytelling and visual effects expertise",
-        "project-video": "./assets/projects/post-production.gif"
+        "project-video": "https://github.com/angelocolocado/clcd/blob/main/assets/projects/post-production-compressed.gif?raw=true"
     }
 }

@@ -8,21 +8,21 @@
       "id": 1,
       "title": "E-Commerce Platform",
       "description": "A modern, responsive e-commerce solution with real-time inventory management, secure payment integration, and advanced analytics dashboard.",
-      "image": "assets/projects/e-commerce.gif",
+      "image": "https://github.com/angelocolocado/clcd/blob/main/assets/projects/e-commerce.gif?raw=true",
       "link": ""
     },
     {
       "id": 2,
       "title": "Admin Management System",
       "description": "Comprehensive admin management platform featuring user roles, permissions, activity logs, and detailed reporting capabilities.",
-      "image": "assets/projects/admin-system.gif",
+      "image": "https://github.com/angelocolocado/clcd/blob/main/assets/projects/admin-system.gif?raw=true",
       "link": ""
     },
     {
       "id": 3,
       "title": "Advanced Analytics Platform",
       "description": "Comprehensive analytics dashboard with real-time data visualization, user activity tracking, and customizable reporting features.",
-      "image": "assets/projects/analytics-system.gif",
+      "image": "https://github.com/angelocolocado/clcd/blob/main/assets/projects/analytics-system.gif?raw=true",
       "link": ""
     },
     {
